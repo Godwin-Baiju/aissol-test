@@ -15,6 +15,14 @@ const nextConfig = {
   },
   images: {
     unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.ctfassets.net',
+        port: '',
+        pathname: '/**',
+      },
+    ],
   },
   experimental: {
     webpackBuildWorker: true,
@@ -46,3 +54,5 @@ function mergeConfig(nextConfig, userConfig) {
 }
 
 export default nextConfig
+
+
