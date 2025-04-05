@@ -136,5 +136,5 @@ export function getImageUrl(assetId: string, assets: ContentfulAsset[]): string 
     return '/images/placeholder.jpg'; // Fallback image
   }
   
-  return `https:${asset.fields.file.url}`;
+  return asset.fields.file.url;
 } 
